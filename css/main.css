@@ -8,6 +8,10 @@ header, main, footer {
     }
 }
 
+main{
+    padding-top: 50px;
+}
+
 
 ul.sidenav.sidenav-fixed{
     -webkit-box-shadow: none;
@@ -25,7 +29,7 @@ ul.sidenav.sidenav-fixed{
 }
 
 .search{
-   
+
 
 }
 
@@ -75,4 +79,16 @@ ul.sidenav.sidenav-fixed{
     font-size: 13px;
     font-weight: 600;
 
+}
+
+.profil-btn{
+    background-color: #ffdbf1;
+    color: black;
+    font-weight: 600;
+}
+
+.profil-btn2{
+    background-color: transparent;
+    color: black;
+    font-weight: 600;
 }

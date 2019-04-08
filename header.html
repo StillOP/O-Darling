@@ -10,6 +10,16 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
+        <div class="fixed-action-btn direction-left" style="position: fixed; top:8px;">
+            <a class="btn-floating btn-large profil-btn">
+                <i class="large material-icons" style="color: black;">person</i>
+            </a>
+            <ul>
+                <li style="box-shadow: 5px 5px 5px black;"><a class="btn-flat profil-btn2">Connexion</a></li>
+                <li style="box-shadow: 5px 5px 5px black;"><a class="btn-flat profil-btn2">Inscription</a></li>
+            </ul>
+        </div>
+
         <ul id="slide-out" class="sidenav sidenav-fixed">
             <li class="logo">
                 <a href="#!">
@@ -88,6 +98,10 @@
         <script type="application/javascript">
             $(document).ready(function(){
                 $('.scrollspy').scrollSpy();
+            });
+
+            $(document).ready(function(){
+                $('.fixed-action-btn').floatingActionButton();
             });
         </script>
 
