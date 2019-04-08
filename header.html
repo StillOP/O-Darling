@@ -10,42 +10,86 @@
         <link rel="stylesheet" href="css/main.css" />
     </head>
     <body>
-        <header>
-            <div class="nav-div">
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+            <li class="logo">
+                <a href="#!">
+                    <img src="img/Logo%20O'%20Darling.png"/>
+                </a>
+            </li>
+            <li class="search">
+                <div class="row search-wrapper">
+                    <div class="col s10">
+                        <input class="browser-default" id="search" placeholder=" Recherche..." required>
+                    </div>
+                    <div class="col s2">
+                        <i class="material-icons">search</i>
+                    </div>
+                </div>
+            <li class="menu-item">
                 <div class="row">
-                    <div class="col s6 offset-s3" style="margin-bottom: 10vh;">
-                        <a>
-                            <img src="img/Logo%20O'%20Darling.png" id="logo" style="width: 24vw"/>
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Dressing.PNG"/>
+                            Dressing
+                        </a>
+                    </div>
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Shop'.PNG"/>
+                            Shop
                         </a>
                     </div>
                 </div>
-                <div class="row" id="menu-logo-row">
-                    <div class="col s2">
-                        <a href="#"><img class="menu-logo" src="img/Logo%20Dressing.PNG"/></a>
+                <div class="row">
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Retouch'.PNG"/>
+                            Retouche
+                        </a>
                     </div>
-                    <div class="col s2">
-                        <a href="#"><img class="menu-logo" src="img/Logo%20pressing.PNG"/></a>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><img class="menu-logo" src="img/Logo%20Shop'.PNG"/></a>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><img class="menu-logo" src="img/Logo%20Retouch'.PNG"/></a>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><img class="menu-logo" src="img/Logo%20Conseil.PNG"/></a>
-                    </div>
-                    <div class="col s2">
-                        <a href="#"><img class="menu-logo" src="img/Logo%20Location.PNG"/></a>
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20pressing.PNG"/>
+                            Pressing
+                        </a>
                     </div>
                 </div>
-            </div>
-        </header>
+                <div class="row">
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Conseil.PNG"/>
+                            Conseil
+                        </a>
+                    </div>
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Location.PNG"/>
+                            Location
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <main>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius, nibh ut rhoncus tempus, massa sapien volutpat nisl, non aliquet est purus eu orci. Quisque et dolor sodales, sodales augue eget, cursus metus. Proin porta, sapien id tincidunt cursus, metus ligula pellentesque odio, sit amet egestas diam dolor vel urna. Mauris ac dignissim risus, sit amet luctus est. Sed in justo lacinia diam efficitur dictum at et ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam enim felis, dapibus nec eros eget, iaculis ullamcorper tortor. Sed ipsum nibh, porta sit amet eleifend et, mollis tempor sem. Aliquam suscipit ultrices velit, a blandit ante semper ut. Praesent consectetur nibh quis cursus scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 
-        <div><!--BODY--></div>
+                Nulla facilisi. Nam bibendum sapien nisi, eget euismod ante viverra vitae. Nam vel molestie mi. Vivamus dictum dictum scelerisque. Ut scelerisque ultricies neque, non ullamcorper quam tristique in. Donec consectetur dui luctus ex tristique sodales. Pellentesque interdum metus sit amet turpis condimentum maximus. Curabitur vel erat interdum, placerat massa sed, malesuada nisl. Sed nec venenatis turpis. Vivamus elit dolor, fringilla vitae neque nec, ullamcorper aliquam quam. Aenean pulvinar faucibus diam ac viverra. Aliquam mollis odio eget massa mollis, a dictum massa pharetra. Pellentesque ut iaculis purus, luctus faucibus arcu.
+
+                Nullam nec est ac turpis euismod scelerisque et quis dui. Sed faucibus felis non maximus pharetra. Cras ut velit dapibus eros fermentum finibus. Integer auctor pharetra gravida. Aliquam erat volutpat. Phasellus feugiat metus at dapibus lacinia. Donec mauris neque, aliquam id lacinia quis, maximus nec enim. 
+            </div>
+        </main>
         <footer><!--FOOTER--></footer>
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/materialize.min.js"></script>
+
+        <script type="application/javascript">
+            $(document).ready(function(){
+                $('.scrollspy').scrollSpy();
+            });
+        </script>
+
     </body>
 </html>
