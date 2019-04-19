@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>O'Darling</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <!--<div class="fixed-action-btn direction-left" style="position: fixed; top:8px;">
+<a class="btn-floating btn-large profil-btn">
+<i class="large material-icons" style="color: black;">person</i>
+</a>
+<ul>
+<li style="box-shadow: 5px 5px 5px black;"><a class="btn-flat profil-btn2">Connexion</a></li>
+<li style="box-shadow: 5px 5px 5px black;"><a class="btn-flat profil-btn2">Inscription</a></li>
+</ul>
+</div>-->
+
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+            <li class="logo">
+                <a href="#!" id="logo-link">
+                    <img src="img/Logo%20O'%20Darling.png"/>
+                </a>
+            </li>
+            <li class="search">
+                <div class="row search-wrapper">
+                    <div class="col s9">
+                        <input class="browser-default" id="search" placeholder=" Recherche..." required>
+                    </div>
+                    <div class="col s3">
+                        <i class="material-icons">search</i>
+                    </div>
+                </div>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Dressing.PNG"/>
+                            Dressing
+                        </a>
+                    </div>
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Shop'.PNG"/>
+                            Shop
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Retouch'.PNG"/>
+                            Retouche
+                        </a>
+                    </div>
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20pressing.PNG"/>
+                            Pressing
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Conseil.PNG"/>
+                            Conseil
+                        </a>
+                    </div>
+                    <div class="col s6">
+                        <a href="#">
+                            <img class="menu-logo" src="img/Logo%20Location.PNG"/>
+                            Location
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li id="copyright">
+                &copy; O'Darling 2019
+            </li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <main style="position:absolute; top:0;">
+            <div class="row" id="main-row">
+                <div class="col s6" id="bg1">
+                </div>
+                <div class="col s6" id="bg2">
+                </div>
+            </div>
+            <div id="title">
+                <div id="title-text">
+                    <h1> Bienvenu sur O'Darling</h1>
+                    <br/>
+                    <h2>Le site de location de vêtement.</h2> 
+                </div>
+            </div>
+            <div id="carousel">
+                <div class="carousel carousel-slider center" id="carousel-1">
+                    <div class="carousel-item red white-text" href="#one!" id="slide-1">
+                        <p class="white-text">Mode</p>
+                    </div>
+                    <div class="carousel-item white-text" href="#two!" id="slide-2">
+                        <p class="white-text">Conseils personalisés</p>
+                    </div>
+                    <div class="carousel-item white-text" href="#three!" id="slide-3">
+                        <p class="white-text">Retouches</p>
+                    </div>
+                    <div class="carousel-item white-text" href="#four!" id="slide-4">
+                        <p class="white-text">Pressing</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer><!--FOOTER--></footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+
+        <script type="application/javascript">
+            $(document).ready(function(){
+                $('.scrollspy').scrollSpy();
+            });
+
+            $(document).ready(function(){
+                $('.fixed-action-btn').floatingActionButton();
+            });
+
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                indicators: true
+            });
+
+            var carousel = document.getElementById('carousel-1');
+
+            var carousel_instance = M.Carousel.getInstance(carousel);
+
+            setInterval(function() {
+                carousel_instance.next();
+            }, 5000);
+
+        </script>
+
+    </body>
+</html>
