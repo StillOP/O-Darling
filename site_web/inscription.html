@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulaire</title>
+</head>
+
+<body>
+	<h1>INSCRIPTION</h1>
+	<br>
+	Nom:
+	<input type="email" name="nom" id="text">
+	<br> <br>
+	Prenom:
+	<input type="email" name="nom" id="text">
+	<br> <br>
+	Psoeudo:
+	<input type="email" name="nom" id="text">
+	<br> <br>
+	 Email:
+	<input type="email" name="email" id="email">
+	<br> <br> Pasword:
+	<input type="password" name="password" id="password">
+	<br> <br>
+	<input id="btn" type="submit" name="btn">
+	<br> <br>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js">
+	</script>
+	
+	<script>
+		// Initialize Firebase
+		/*var config = {
+			apiKey: "AIzaSyCE7U2QNL2esO07k3CvCCd0fQOStv2jnS4",
+			authDomain: "formulaire-f07e9.firebaseapp.com",
+			databaseURL: "https://formulaire-f07e9.firebaseio.com",
+			projectId: "formulaire-f07e9",
+			storageBucket: "formulaire-f07e9.appspot.com",
+			messagingSenderId: "271584601713"
+		};
+		firebase.initializeApp(config);
+*/
+	</script>
+	<script>
+		$(function() {
+			$('#btn').on('click', function() {
+				var maemail = $("#email").val();
+				var mapassword = $("#password").val();
+				var data = {
+					email: $('#email').val(),
+					password: $('#password').val(),
+				};
+				firebase.auth().signInWithEmailAndPassword(maemail, mapassword).catch(function(error) {
+					// Handle Errors here.
+					var errorCode = error.code;
+					var errorMessage = error.message;
+					alert(errorMessage);
+					alert(errorCode);
+					// ...
+				});
+				console.log(data);
+				var url_link = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupUser?key=AIzaSyCE7U2QNL2esO07k3CvCCd0fQOStv2jnS4"
+				var jqXHR = $.ajax({
+					method: "POST",
+					url: url_link,
+					data: JSON.stringify(data),
+					dataType: "json",
+					contentType: "application/json"
+				}).done(function(data) {
+					alert('OUH! : submitted!');
+
+				}).fail(function(jqXHR, textStatus, errorThrown) {
+					alert('FAILD')
+					console.log(jqXHR.responseText)
+					document
+						.querySelector('#btn')
+						.addEventListener('click', () => location.href = "gmail/connecte.html");
+
+				});
+
+			})
+		})
+
+	</script>
+</body>
+
+</html>
